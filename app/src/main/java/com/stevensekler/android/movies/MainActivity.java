@@ -95,6 +95,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
 
+        if (toast != null){
+            toast.cancel();
+        }
+
         if (movieDatabaseHelper.numberOfRows() > 0) {
             database.close();
         }
