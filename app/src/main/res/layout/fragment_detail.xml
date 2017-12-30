@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/see_details"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:scrollbars="none"
+    tools:context="com.stevensekler.android.movies.Fragments.DetailFragment"
+    >
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:id="@+id/image_border"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:contentDescription="@string/poster_description"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/blank500" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@id/imageView2"
+                android:background="@color/translucent"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/film_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imageView2"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@android:color/white"
+                tools:text="Length of the movie" />
+
+            <TextView
+                android:id="@+id/film_votes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imageView2"
+                android:layout_alignEnd="@id/imageView2"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@android:color/white"
+                tools:text="Votes" />
+
+            <ProgressBar
+                android:id="@+id/backdrop_image_loading"
+                style="?android:attr/spinnerMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/detail_grid_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:columnCount="1"
+            android:orientation="vertical"
+            android:rowCount="23"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_border">
+
+            <View
+                android:id="@+id/animation_view"
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardGrey"
+                />
+
+            <View
+                android:id="@+id/view_backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundGrey"
+                android:text="@string/genres"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/film_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardGrey"
+                tools:text="The genres of the movie" />
+
+            <View
+                android:id="@+id/view_genre"
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundGrey"
+                android:text="@string/description"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/film_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardGrey"
+                tools:text="Description of the movie" />
+
+            <View
+                android:id="@+id/view_description"
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundGrey"
+                android:text="@string/cast"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_detail_cast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardGrey"
+                android:clickable="false" />
+
+            <View
+                android:id="@+id/view_cast"
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundGrey"
+                android:text="@string/production_details"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/production_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardGrey"
+                tools:text="Release date" />
+
+            <View
+                android:id="@+id/view_production_details"
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundGrey"
+                android:text="@string/recommendations"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_recommendations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardGrey"
+                android:clickable="false" />
+
+
+            <View
+                android:id="@+id/view_recommendations"
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundGrey"
+                android:text="@string/comments"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/film_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardGrey"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:maxLines="4"
+                tools:text="Comments made by the users" />
+
+            <View
+                android:id="@+id/view_comments"
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundGrey"
+                android:text="@string/similar_movies"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_similar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardGrey"
+                android:clickable="false" />
+        </GridLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+

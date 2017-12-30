@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="cast">Cast</string>
+    <string name="genres">Genres</string>
+    <string name="genre">Genre</string>
+    <string name="description">Overview</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="comments">Comments</string>
+    <string name="comment">Comment</string>
+    <string name="production_details">Production details</string>
+    <string name="production_detail">Production detail</string>
+    <string name="similar_movies">Similar movies</string>
+    <string name="similar_movie">Similar movie</string>
+    <string name="poster_description">The poster of the movie</string>
+    <string name="cast_image">Cast image</string>
+    <string name="recommended_movie">Recommended movie poster</string>
+    <string name="similar">Similar movie poster</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="action_delete_list">Delete list</string>
+    <string name="action_exit">Exit</string>
+    <string name="detail_activity">   </string>
+    <string name="list_icon">List\'s icon</string>
+    <string name="action_search">Search for any movie</string>
+    <string name="production_companies">Production companies</string>
+    <string name="production_company">Production company</string>
+    <string name="production_countries">Production countries</string>
+    <string name="production_country">Production country</string>
+    <string name="the_movie_database">Powered by The Movie Database</string>
+    <string name="list_button">Add movie to your list or mark it as watched</string>
+    <string name="no_internet">No Internet connection!</string>
+    <string name="wrong">"Something went wrong!"</string>
+    <string name="empty_list">"Your list is empty!"</string>
+    <string name="already_watched">"You have already watched this movie!"</string>
+    <string name="marked_watched">"Movie marked as watched!"</string>
+    <string name="added_to_list">"Movie added to the list!"</string>
+    <string name="no_release">"isn't released"</string>
+    <string name="empty_list_already">"Your list is already empty!"</string>
+    <string name="no_movie">"There isn't such a movie!"</string>
+    <string name="no_data_available">"No data available about this movie!"</string>
+    <string name="hour">"h"</string>
+    <string name="minute">"m"</string>
+    <string name="sci_fi">"SF"</string>
+    <string name="author">"Author: "</string>
+    <string name="release_date">"Release date     "</string>
+    <string name="budget">"Budget     "</string>
+    <string name="revenue">"Revenue     "</string>
+    <string name="delete_question">"Do you delete your list?"</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+     <string name="backdrop_image">Backdrop image</string>
+    <string-array name="movie_array">
+        <item>My list</item>
+        <item>Popular</item>
+        <item>Now playing</item>
+        <item>Top rated</item>
+        <item>Search</item>
+    </string-array>
+</resources>

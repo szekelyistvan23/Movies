@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "860981427823",
+    "firebase_url": "https://movies-7ea27.firebaseio.com",
+    "project_id": "movies-7ea27",
+    "storage_bucket": "movies-7ea27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860981427823:android:5faf145f47c52303",
+        "android_client_info": {
+          "package_name": "com.stevensekler.android.movies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860981427823-fggiprl8qsk8q42c2ot1ko6vg4mqokqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhdZaQCfJ0TAoQhM-_t4VY_CkSCe8WbVw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

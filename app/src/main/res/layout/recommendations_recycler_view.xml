@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recommendations_frame_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/recommendations_movie_image"
+        android:layout_width="171dp"
+        android:layout_height="256.5dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/recommended_movie"
+        card_view:srcCompat="@drawable/blank354" />
+
+    <View
+        android:id="@+id/recommendations_movie_view"
+        android:layout_width="171dp"
+        android:layout_height="256.5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/translucent"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/recommendations_movie_name"
+        android:layout_width="171dp"
+        android:layout_height="256.5dp"
+        android:layout_gravity="start"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@color/lightGreen"
+        android:visibility="invisible"
+        tools:text="TextView" />
+
+
+</FrameLayout>

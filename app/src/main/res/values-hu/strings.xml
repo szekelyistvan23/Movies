@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="similar_movie">Hasonló film</string>
+    <string name="similar_movies">Hasonló filmek</string>
+    <string name="author">"Szerző: "</string>
+    <string name="hour">"ó"</string>
+    <string name="minute">"p"</string>
+    <string name="action_exit">Kilépés</string>
+    <string name="similar">Hasonló filmek  poszterre</string>
+    <string name="cast">Szereposztás</string>
+    <string name="budget">"Költségvetés     "</string>
+    <string name="delete">Törlés</string>
+    <string name="description">Leírás</string>
+    <string name="empty_list">"A listád üres!"</string>
+    <string name="empty_list_already">"A listád már üres!"</string>
+    <string name="action_delete_list">Lista törlése</string>
+    <string name="the_movie_database">Köszönet a The Movie Database-nek</string>
+    <string name="action_search">Bármilyen film keresése</string>
+    <string name="added_to_list">"Film hozzáadva a listához!"</string>
+    <string name="already_watched">"Már láttad a filmet!"</string>
+    <string name="cancel">Mégse</string>
+    <string name="cast_image">Színész képe</string>
+    <string name="comment">Hozzászólás</string>
+    <string name="comments">Hozzászólások</string>
+    <string name="delete_question">"Törlöd a listádat?"</string>
+    <string name="drawer_open">Nyitás</string>
+    <string name="drawer_close">Bezárás</string>
+    <string name="genre">Kategória</string>
+    <string name="genres">Kategóriák</string>
+    <string name="list_button">Ad a filmet a listához vagy jelöld meg mint látott</string>
+    <string name="list_icon">Lista ikonja</string>
+    <string name="marked_watched">"Film megnézve!"</string>
+    <string name="no_data_available">"Nincs adat erről a filmről!"</string>
+    <string name="no_internet">Nincs Internet kapcsolat!</string>
+    <string name="no_movie">"Nincs ilyen című film!"</string>
+    <string name="no_release">"nincs megjelenve"</string>
+    <string name="poster_description">A film poszterre</string>
+    <string name="sci_fi">"Sci-fi"</string>
+    <string name="production_company">Gyártó</string>
+    <string name="production_companies">Gyártók</string>
+    <string name="production_country">Ország</string>
+    <string name="production_countries">Országok</string>
+    <string name="production_detail">Gyártási adat</string>
+    <string name="production_details">Gyártási adatok</string>
+    <string name="recommendation">Ajánlott film</string>
+    <string name="recommendations">Ajánlott filmek</string>
+    <string name="recommended_movie">Ajánlott filmek poszterre</string>
+    <string name="release_date">"Bemutató     "</string>
+    <string name="revenue">"Bevétel     "</string>
+    <string name="wrong">"Hiba történt!"</string>
+    <string name="detail_activity">"   "</string>
+    <string-array name="movie_array">
+        <item>Saját lista</item>
+        <item>Legnézettebbek</item>
+        <item>A mozikban</item>
+        <item>Legjobbak</item>
+        <item>Keresés</item>
+    </string-array>
+    <string name="backdrop_image">Háttérkép</string>
+</resources>
