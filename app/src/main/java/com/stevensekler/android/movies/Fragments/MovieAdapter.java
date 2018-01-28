@@ -11,7 +11,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.stevensekler.android.movies.DetailActivity;
@@ -86,20 +85,20 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
                 Animation rotate = AnimationUtils.loadAnimation(context, R.anim.rotate_image_view);
 
                 if (((MainActivity) context).isMovieWatched(movies.get(pos).getId())) {
-                    Toast.makeText(context, context.getString(R.string.already_watched), Toast.LENGTH_SHORT).show();
+                    ((MainActivity) context).showToast(context.getString(R.string.already_watched));
                 } else {
 
                     if ((((MainActivity) context).movieWatchedFromArray(movies.get(pos)))) {
                         holder.addImage.setImageResource(ic_list_item_watched);
                         holder.addImage.startAnimation(rotate);
-                        Toast.makeText(context, context.getString(R.string.marked_watched), Toast.LENGTH_SHORT).show();
+                        ((MainActivity) context).showToast(context.getString(R.string.marked_watched));
                         ((MainActivity) context).sortMovies();
                         ((MainActivity) context).updateList(false);
                     } else {
                         ((MainActivity) context).addToMyMovieArray(movies.get(pos));
                         holder.addImage.setImageResource(ic_list_add_check);
                         holder.addImage.startAnimation(rotate);
-                        Toast.makeText(context, context.getString(R.string.added_to_list), Toast.LENGTH_SHORT).show();
+                        ((MainActivity) context).showToast(context.getString(R.string.added_to_list));
                         ((MainActivity) context).sortMovies();
                     }
                 }
