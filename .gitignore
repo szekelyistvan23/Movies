@@ -10,3 +10,4 @@
 .externalNativeBuild
 gradle.properties
 /app/release/app-release.apk
+google-services.json
