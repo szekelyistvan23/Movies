@@ -24,8 +24,4 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
-#-keep class android.support.** { *; }
-#-keep class com.squareup.picasso.** { *; }
-#-keep class com.squareup.okhttp.** { *; }
-#-keep class okio.** { *; }
-
+-keep class android.support.** { *; }
