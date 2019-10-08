@@ -1,5 +1,13 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+androidExtensions {
+    experimental = true
+}
+
+
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
@@ -36,6 +44,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-crash:10.2.0'
     implementation 'com.squareup.picasso:picasso:2.5.2'
     testImplementation 'junit:junit:4.12'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 apply plugin: 'com.google.gms.google-services'
+repositories {
+    mavenCentral()
+}
