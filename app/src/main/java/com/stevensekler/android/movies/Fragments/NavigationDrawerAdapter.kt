@@ -36,7 +36,7 @@ class NavigationDrawerAdapter(mainActivity: MainActivity, private val result: Ar
         internal var imageView: ImageView? = null
     }
 
-    override fun getView(position: Int, convertView: View, parent: ViewGroup): View {
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         var rowView: View? = convertView
 
@@ -50,8 +50,8 @@ class NavigationDrawerAdapter(mainActivity: MainActivity, private val result: Ar
         }
 
         val holder = rowView.tag as Holder
-        holder.textView!!.text = result[position]
-        holder.imageView!!.setImageResource(imageId[position])
+        holder.textView?.text = result[position]
+        holder.imageView?.setImageResource(imageId[position])
 
         return rowView
     }
