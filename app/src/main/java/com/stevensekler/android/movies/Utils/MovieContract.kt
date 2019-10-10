@@ -9,17 +9,17 @@ import android.provider.BaseColumns
 
 object MovieContract {
 
-    val DB_NAME = "movies.db"
-    val DB_VERSION = 1
-    val TABLE_NAME = "movie"
-    val MOVIE_COLUMN_ID = "MOVIE_ID"
-    val MOVIE_COLUMN_NAME = "NAME"
-    val MOVIE_COLUMN_GENRE = "GENRE"
-    val MOVIE_COLUMN_RELEASE = "RELEASE"
-    val MOVIE_COLUMN_VOTES = "VOTES"
-    val MOVIE_COLUMN_POSTER = "POSTER"
-    val MOVIE_COLUMN_WATCHED = "WATCHED"
-    val CREATE_TABLE = ("CREATE TABLE movie ("
+    const val DB_NAME = "movies.db"
+    const val DB_VERSION = 1
+    const val TABLE_NAME = "movie"
+    const val MOVIE_COLUMN_ID = "MOVIE_ID"
+    const val MOVIE_COLUMN_NAME = "NAME"
+    const val MOVIE_COLUMN_GENRE = "GENRE"
+    const val MOVIE_COLUMN_RELEASE = "RELEASE"
+    const val MOVIE_COLUMN_VOTES = "VOTES"
+    const val MOVIE_COLUMN_POSTER = "POSTER"
+    const val MOVIE_COLUMN_WATCHED = "WATCHED"
+    const val CREATE_TABLE = ("CREATE TABLE movie ("
             + "_id INTEGER PRIMARY KEY AUTOINCREMENT, "
             + "MOVIE_ID INTEGER, "
             + "NAME TEXT, "
