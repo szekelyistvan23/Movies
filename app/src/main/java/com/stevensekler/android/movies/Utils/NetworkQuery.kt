@@ -32,15 +32,6 @@ import java.util.Scanner
 
 object NetworkQuery {
 
-    val DETAILS = "details"
-    val IMAGES = "images"
-    val REVIEWS = "reviews"
-    val CREDITS = "credits"
-    val RECOMMENDATIONS = "recommendations"
-    val POPULAR = "popular"
-    val NOW_PLAYING = "now_playing"
-    val TOP_RATED = "top_rated"
-    val SEARCH = "search"
     val NUMBER_OF_PAGES_FOR_PNT = 7
     val NUMBER_OF_PAGES_FOR_SEARCH_QUERY = 5
     private val MOVIEDB_BASE_URL = "https://api.themoviedb.org/3/movie"

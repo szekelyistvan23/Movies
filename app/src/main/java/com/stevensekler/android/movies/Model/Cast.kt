@@ -14,5 +14,4 @@ class Cast(
     var character: String? = null,
     var gender: Int = 0,
     var profileImage: String? = null) : Parcelable
-//    TODO:      private set ??????
 

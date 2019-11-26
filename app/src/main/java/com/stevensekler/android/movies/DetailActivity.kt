@@ -66,10 +66,10 @@ class DetailActivity : AppCompatActivity() {
             fragment.setArguments(args)
 
             val fragmentManager = supportFragmentManager
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
-            fragmentTransaction.add(R.id.detail_activity_movie, fragment, DETAIL_FRAGMENT)
-            fragmentTransaction.commit()
+            fragmentManager.beginTransaction()
+                            .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+                            .add(R.id.detail_activity_movie, fragment, DETAIL_FRAGMENT)
+                            .commit()
         }
 
 

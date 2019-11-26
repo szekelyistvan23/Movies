@@ -364,9 +364,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun showFragment(fragment: Fragment?) {
         val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.list_layout, fragment, LIST_FRAGMENT)
-        fragmentTransaction.commit()
+        fragmentManager.beginTransaction()
+                        .replace(R.id.list_layout, fragment, LIST_FRAGMENT)
+                        .commit()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

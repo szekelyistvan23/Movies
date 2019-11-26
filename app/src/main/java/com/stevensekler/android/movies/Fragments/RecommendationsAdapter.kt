@@ -36,12 +36,13 @@ class RecommendationsAdapter(private val movies: ArrayList<Movie>, private val c
 
         val pos = holder.adapterPosition
 
-        holder.movieName.text = movies[position].name +
+        val name = movies[position].name +
                 "\n\n" +
                 movies[position].votes +
                 "\n\n" +
                 movies[position].genre
 
+        holder.movieName.text = name
         if (movies[position].poster == "NO_IMAGE") {
             holder.moviePoster.setImageResource(R.drawable.film354)
         } else {

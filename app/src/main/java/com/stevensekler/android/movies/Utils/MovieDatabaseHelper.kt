@@ -61,7 +61,7 @@ class MovieDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DB_NAME,
 
     fun insertMovie(movie: Movie): Boolean {
         val db = this.writableDatabase
-        val contentValues = ContentValues()
+        var contentValues = ContentValues()
         contentValues.put(MOVIE_COLUMN_ID, movie.id)
         contentValues.put(MOVIE_COLUMN_NAME, movie.name)
         contentValues.put(MOVIE_COLUMN_GENRE, movie.genre)

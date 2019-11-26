@@ -52,15 +52,10 @@ class CastAdapter(private val actors: ArrayList<Cast>, private val context: Cont
     }
 
     inner class CastViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var castName: TextView
-        var castCharacter: TextView
-        var castProfileImage: ImageView
+        var castName: TextView = itemView.findViewById(R.id.cast_name)
+        var castCharacter: TextView = itemView.findViewById(R.id.cast_character)
+        var castProfileImage: ImageView = itemView.findViewById(R.id.cast_image)
 
-        init {
-            castName = itemView.findViewById(R.id.cast_name)
-            castCharacter = itemView.findViewById(R.id.cast_character)
-            castProfileImage = itemView.findViewById(R.id.cast_image)
-        }
     }
 }
 

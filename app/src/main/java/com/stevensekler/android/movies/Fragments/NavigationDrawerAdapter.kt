@@ -36,7 +36,7 @@ class NavigationDrawerAdapter(mainActivity: MainActivity, private val result: Ar
         internal var imageView: ImageView? = null
     }
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
         var rowView: View? = convertView
 

@@ -604,7 +604,7 @@ class DetailFragment : Fragment(), LoaderManager.LoaderCallbacks<MovieDetails> {
     private fun commentsConcatenate(map: Map<String, String>?): String {
         var s = ""
         val threeNewLine = "\n\n\n"
-        if (map != null && map.size > 0) {
+        if (map != null && map.isNotEmpty()) {
             val it = map.entries.iterator()
             var pair = it.next()
             s += fragmentContext!!.resources.getString(R.string.author) + pair.key + threeNewLine + pair.value
@@ -835,13 +835,6 @@ class DetailFragment : Fragment(), LoaderManager.LoaderCallbacks<MovieDetails> {
         private val MOVIEDB_DETAIL_SEARCH_LOADER = 23
 
         private val IMAGE_BASE_URL = "http://image.tmdb.org/t/p/"
-        private val W92 = "w92"
-        private val W154 = "w154"
-        private val W185 = "w185"
-        private val W342 = "w342"
-        private val W500 = "w500"
-        private val W780 = "w780"
-        private val ORIGINAL = "original"
         val COMMENTS_TEXT = "comments_text"
         private val CACHED_DATA = "cached_data"
         private val JSON_SIMILAR = "similar"

@@ -28,6 +28,8 @@ import com.stevensekler.android.movies.Model.Movie
 import com.stevensekler.android.movies.Model.UrlArray
 import com.stevensekler.android.movies.R
 import com.stevensekler.android.movies.Utils.NetworkQuery
+import com.stevensekler.android.movies.Utils.NetworkQuery.QueryType
+import com.stevensekler.android.movies.Utils.NetworkQuery.QueryType.*
 
 import org.json.JSONArray
 import org.json.JSONException
@@ -80,15 +82,12 @@ class ListFragment : Fragment(), LoaderManager.LoaderCallbacks<ArrayList<Movie>>
             when (j) {
                 0 -> {
                 }
-                1 -> moviedbSearchUrl = buildUrl(NetworkQuery.POPULAR, "")
-                2 -> moviedbSearchUrl = buildUrl(NetworkQuery.NOW_PLAYING, "")
-                3 -> moviedbSearchUrl = buildUrl(NetworkQuery.TOP_RATED, "")
-                4 -> if (search != null) {
-                    moviedbSearchUrl = buildUrl(NetworkQuery.SEARCH, search)
-                    searchEnabled = true
-
-                }
-                else -> moviedbSearchUrl = buildUrl(NetworkQuery.POPULAR, "")
+                1 -> moviedbSearchUrl = buildUrl(popular, "")
+                2 -> moviedbSearchUrl = buildUrl(now_playing, "")
+                3 -> moviedbSearchUrl = buildUrl(top_rated, "")
+                4 -> {moviedbSearchUrl = buildUrl(QueryType.search, search)
+                    searchEnabled = true}
+                else -> moviedbSearchUrl = buildUrl(popular, "")
             }
         }
 
@@ -105,7 +104,7 @@ class ListFragment : Fragment(), LoaderManager.LoaderCallbacks<ArrayList<Movie>>
         }
 
         if (change && checkSearch && search != null) {
-            moviedbSearchUrl = buildUrl(NetworkQuery.SEARCH, search)
+            moviedbSearchUrl = buildUrl(QueryType.search, search)
         }
 
 
@@ -403,7 +402,7 @@ class ListFragment : Fragment(), LoaderManager.LoaderCallbacks<ArrayList<Movie>>
         }
         if (search != null) {
             outState.putString(SEARCH_WORD, search)
-//            (activity as MainActivity).setSearchString(search)
+            (activity as MainActivity).setSearchString(search.toString())
         }
 
         if (index > 0)
@@ -417,13 +416,6 @@ class ListFragment : Fragment(), LoaderManager.LoaderCallbacks<ArrayList<Movie>>
         private val IMAGE_BASE_URL = "http://image.tmdb.org/t/p/"
         private val CACHED_DATA = "cached_data"
         private val CONFIGURATION_CHANGE = "configuration_change"
-        private val W92 = "w92"
-        private val W154 = "w154"
-        private val W185 = "w185"
-        private val W342 = "w342"
-        private val W500 = "w500"
-        private val W780 = "w780"
-        private val ORIGINAL = "original"
         private val ENABLED = "ENABLED"
         private val INDEX = "INDEX"
         private val SEARCH_WORD = "SEARCH"
